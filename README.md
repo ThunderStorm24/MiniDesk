@@ -29,15 +29,15 @@ The goal of this project is to transform a traditional portfolio into a playful 
 
 ### 🏠 Desktop View  
 The main interactive desktop with clickable icons.  
-![Desktop](images/readme/Pulpit1.png)
+![Desktop](images/Readme/Pulpit1.png)
 
 ### 🪟 Open Windows  
 Multiple draggable windows showing About, Projects, and Links sections.  
-![Windows](images/readme/Pulpit2.png)
+![Windows](images/Readme/Pulpit2.png)
 
 ### 🌙 Power Off Mode  
 Turn off the virtual monitor with the button in the bottom-right corner.  
-![Power Off](images/readme/Pulpit3.png)
+![Power Off](images/Readme/Pulpit3.png)
 
 ---
 
