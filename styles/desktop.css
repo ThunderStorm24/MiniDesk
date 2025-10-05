@@ -1,0 +1,156 @@
+.desktop {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  padding: 13px;
+  background: #fefefe;
+  border: 2px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.innerdesktop {
+border: 2px solid #333;
+border-radius: 12px;
+background: #c2e9fb;
+transition: background 0.5s ease;
+}
+
+.intro-text {
+  margin-top:70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  transition: opacity 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+.intro-title {
+  font-size: 82px;
+  font-weight: bold;
+  color: #222;
+  transition: opacity 0.5s ease;
+}
+
+.intro-undertitle{
+  font-size: 62px;
+  font-weight: bold;
+  color: #222;
+  transition: opacity 0.5s ease;
+}
+
+.dock {
+ position: absolute;
+  bottom: 20px;          /* odległość od dołu */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+  width: 70%;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: opacity 0.5s ease
+}
+
+.icon {
+  cursor: pointer;
+  width: 70px;
+  height: 130px;
+  font-size: 40px;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.icon p {
+  margin: 8px 0 0;
+  font-size: 16px;
+}
+
+.stand {
+  position: absolute;
+  bottom: -104px;   /* wychodzi spod monitora */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 100px;
+  background: #fefefe;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* podstawa */
+.base {
+  position: absolute;
+  bottom: -120px;  /* niżej niż stand */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 30px;
+  background: #fefefe;
+  border: 2px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.led {
+  position: absolute;
+  bottom: 4px;   /* trochę od krawędzi */
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  background: #2ecc71; /* zielona dioda */
+  border: 2px solid #333;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(46, 204, 113, 0.8);
+  cursor: pointer;
+
+  animation: blink 1s infinite;
+}
+
+
+
+@keyframes blink {
+  0%, 60%, 100% { opacity: 1; }
+  30% { opacity: 0.3; }
+}
+
+.innerdesktop.off {
+          background: #111;      /* treść znika */
+}
+
+.innerdesktop.off .intro-title{        
+	opacity:0;
+	pointer-events: none;
+}
+
+.innerdesktop.off .intro-undertitle{        
+	opacity:0;
+	pointer-events: none;
+}
+
+.innerdesktop.off .dock{
+	opacity:0;
+	pointer-events: none;
+}
+
+.innerdesktop.off .window {
+  display:none;
+}
+
+.innerdesktop.off + .led {
+  background: #e74c3c;       /* czerwony */
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.8);
+  animation: none;           /* brak mrugania */
+}

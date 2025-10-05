@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Desktop</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+  <link rel="stylesheet" href="styles/desktop.css" />
+  <link rel="stylesheet" href="styles/window.css" />
+  <link rel="stylesheet" href="styles/about.css" />
+  <link rel="stylesheet" href="styles/projects.css" />
+  <link rel="stylesheet" href="styles/links.css" />
+  <link rel="stylesheet" href="styles/trash.css" />
+  <link rel="stylesheet" href="styles/contact.css" />
+  <link rel="stylesheet" href="styles/settings.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+  <link rel="stylesheet" href="styles/mobile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.5.0/css/flag-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="desktop">
+  <div class="innerdesktop" id="screen">
+  
+  <div class="intro-text"><div class="intro-title">Hi! I'm Thunder</div> <div class="intro-undertitle">programmer</div></div>
+   <div class="dock">
+    <div class="icon" onclick="openWindow('about')">📄<p>About</p></div>
+    <div class="icon" onclick="openWindow('projects')">📁<p>Projects</p></div>
+	<div class="icon" onclick="openWindow('links')">⛓<p>Links</p></div>
+    <div class="icon" onclick="openWindow('trash')">🗑️<p>Trash Bin</p></div>
+    <div class="icon" onclick="openWindow('contact')">✉️<p>Contact</p></div>
+    <div class="icon" onclick="openWindow('settings')">⚙️<p>Settings</p></div>
+	  </div>
+
+    <!-- Okna -->
+	<!-- ABOUT ME -->
+    <div class="window medium" id="about">
+      <div class="window-header">About <button onclick="closeWindow('about')">✖</button></div>
+      <div class="window-body about-content">
+<!-- Górna sekcja -->
+  <div class="about-header">
+    <img src="images/avatar/thunder.jpg" alt="Thunder avatar" class="avatar" />
+    <h2>Thunder</h2>
+  </div>
+
+ <hr class="about-divider" />
+
+<!-- Dolna sekcja -->
+  <div class="about-scroll">
+    <p>Hello! I'm <strong>Thunder</strong>, a passionate <strong>web developer</strong> and programmer.</p>
+    <p>I specialize in <strong>frontend development</strong> — I build modern, responsive websites and applications. I also create videos for my YouTube channel, and I'm continuously learning and evolving in the field of programming.</p>
+
+    <h3>🎓 Education</h3>
+
+    <div class="edu-block">
+      <img src="images/education/uslogo.png" alt="University of Silesia Logo">
+      <div>
+        <strong>University of Silesia in Katowice</strong><br />
+        Master's degree (M.Sc.), Computer Graphics Team<br />
+        <em>March 2024 – September 2025</em>
+      </div>
+    </div>
+
+    <div class="edu-block">
+      <img src="images/education/uslogo.png" alt="University of Silesia Logo">
+      <div>
+        <strong>University of Silesia in Katowice</strong><br />
+        Engineer (B.Sc. Eng.), Web Application Development<br />
+        <em>October 2020 – February 2024</em>
+      </div>
+    </div>
+
+    <div class="edu-block">
+      <img src="images/education/zselogo.jpg" alt="ZSE Logo">
+      <div>
+        <strong>School Complex of Electronics and Computer Science in Sosnowiec</strong><br />
+        Technician, Computer Science<br />
+        <em>September 2016 – May 2020</em>
+      </div>
+    </div>
+
+    <h3>💻 Interests in Tech</h3>
+<ul class="skills-list">
+  <li><i class="fab fa-react" style="color:#61DBFB;"></i> React.js</li>
+  <li><i class="fab fa-js-square" style="color:#F7DF1E;"></i> JavaScript</li>
+  <li><i class="fas fa-video" style="color:#E74C3C;"></i> Video editing</li>
+  <li><i class="fas fa-database" style="color:#2980B9;"></i> Databases</li>
+    </ul>
+
+    <h3>🎯 Other Interests</h3>
+    <ul>
+      <li>Video editing & filmmaking</li>
+      <li>PC gaming</li>
+      <li>ASG (airsoft)</li>
+      <li>Board games</li>
+      <li>Parties & social events</li>
+    </ul>
+
+    <h3>🌍 Languages</h3>
+    <ul class="language-list">
+<li><span class="fi fi-pl"></span> <div>Polish (native)</div></li>
+  <li><span class="fi fi-gb"></span> <div>English (B2 level)</div></li>
+    </ul>
+  </div>
+</div>
+    </div>
+	
+	
+	<!-- PROJECTS -->
+<div class="window medium" id="projects">
+  <div class="window-header">
+    Projects 
+    <button onclick="closeWindow('projects')">✖</button>
+  </div>
+
+  <div class="window-body projects-body">
+    
+    <!-- Sekcja technologies -->
+	<h2>Development / Technologies</h2>
+    <section class="tech-section">
+      <div class="tech-grid">
+        <div class="tech js"><i class="fab fa-js-square js-icon"></i> JavaScript</div>
+      <div class="tech html"><i class="fab fa-html5"></i> HTML/CSS</div>
+      <div class="tech react"><i class="fab fa-react"></i> React</div>
+      <div class="tech node"><i class="fab fa-node-js"></i> Node.js</div>
+      <div class="tech mysql"><i class="fas fa-database"></i> MySQL</div>
+      <div class="tech java"><i class="fab fa-java"></i> Java</div>
+      <div class="tech php"><i class="fab fa-php"></i> PHP</div>
+      <div class="tech excel"><i class="fas fa-file-excel"></i> Excel</div>
+      <div class="tech movavi"><i class="fas fa-video"></i> Movavi Video Editor 24</div>
+      </div>
+    </section>
+
+    <!-- Projekty Web Development -->
+	<h2>Projects (Web Development)</h2>
+    <section class="projects-section">
+      <div class="project-card">
+        <img src="images/projects/portfolio.png" alt="Project 1 screenshot">
+        <h3>Project 1</h3>
+          <p class="tech-line">
+    <span>Technologies:</span>
+    <i class="fab fa-js-square js-icon"></i>
+    <i class="fab fa-html5 html-icon"></i>
+  </p>
+	  
+        <div class="project-links">
+          <a href="https://thunderstorm24.github.io" target="_blank">Live Demo</a>
+          <a href="https://github.com/ThunderStorm24/ThunderStorm24.github.io" target="_blank">Source Code</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/projects/custom.png" alt="Project 2 screenshot">
+        <h3>Project 2</h3>
+        <p class="tech-line">
+    <span>Technologies:</span>
+		<i class="fab fa-js-square js-icon"></i>
+      <i class="fab fa-html5 html-icon"></i>
+      <i class="fab fa-react react-icon"></i>
+      <i class="fab fa-node-js node-icon"></i>
+      <i class="fas fa-database mysql-icon"></i>
+	  </p>
+	  
+        <div class="project-links">
+          <a href="https://github.com/ThunderStorm24/Helpful_pizzeria" target="_blank">Source Code</a>
+        </div>
+      </div>
+	  
+	  <div class="project-card">
+        <img src="images/projects/solar.png" alt="Project 3 screenshot">
+        <h3>Project 3</h3>
+        <p class="tech-line">
+    <span>Technologies:</span>
+		<i class="fab fa-js-square js-icon"></i>
+      <i class="fab fa-html5 html-icon"></i>
+      <img src="images/icons/threejs.png" alt="Three.js" class="icon-img">
+      <i class="fab fa-node-js node-icon"></i>
+	  </p>
+        <div class="project-links">
+		  <a href="https://thunderstorm24.github.io/Solar_System" target="_blank">Live Demo</a>
+          <a href="https://github.com/ThunderStorm24/Solar_System" target="_blank">Source Code</a>
+        </div>
+      </div>
+	  
+	  <div class="project-card">
+        <img src="images/projects/homebound.jpg" alt="Project 4 screenshot">
+        <h3>Project 4</h3>
+        <p class="tech-line">
+    <span>Technologies:</span>
+		<img src="images/icons/flutter.png" alt="Flutter" class="icon-img">
+      <i class="fab fa-android android-icon"></i>
+	  </p>
+        <div class="project-links">
+          <a href="https://github.com/ThunderStorm24/HomeBound" target="_blank">Source Code</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animacje -->
+	      <h2>Animations/Videos</h2>
+    <section class="animations-section">
+      <div class="project-card">
+        <iframe width="100%" height="250" src="https://www.youtube.com/embed/ddwaNUZaKHs" 
+          frameborder="0" allowfullscreen></iframe>
+        <h3>Unreal Engine Animation</h3>
+        <p class="tech-line">
+    <span>Technologies:</span>
+		<img src="images/icons/unreal.png" alt="Unreal Engine" class="icon-img">
+		</p>
+      </div>
+	  
+	  <div class="project-card">
+        <iframe 
+    width="100%" 
+    height="200" 
+    src="https://www.youtube.com/embed/Tr2vxVy1Dj4" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+        <h3>Chainsaw man opening - animation</h3>
+        <p class="tech-line">
+    <span>Technologies:</span> 
+	<i class="fas fa-video movavi-icon"></i>
+	</p>
+      </div>
+    </section>
+
+
+    <!-- Zakończenie -->
+<section class="outro-section">
+  <h2>That's all</h2>
+  <p>
+    You can see more of my projects on my 
+    <a href="https://github.com/ThunderStorm24" target="_blank">GitHub</a>.<br>
+    Get in touch with me via 
+    <a href="mailto:patryko5@onet.pl">Email</a> or 
+    <a href="https://linkedin.com/in/patryk-orkisz-5b526b335" target="_blank">LinkedIn</a>.
+  </p>
+</section>
+
+  </div>
+</div>
+	
+	<div class="window normal" id="links">
+      <div class="window-header">Links <button onclick="closeWindow('links')">✖</button></div>
+      
+	  <div class="window-body links-body">
+  <div class="link-tile" onclick="window.open('https://github.com/thunderstorm24', '_blank')">
+    <i class="fab fa-github"></i>
+    <span>GitHub</span>
+  </div>
+  <div class="link-tile" onclick="window.open('https://www.linkedin.com/in/patryk-orkisz-5b526b335/', '_blank')">
+    <i class="fab fa-linkedin"></i>
+    <span>LinkedIn</span>
+  </div>
+    <div class="link-tile" onclick="window.open('https://www.youtube.com/@ThunderStorm24', '_blank')">
+    <i class="fab fa-youtube"></i>
+    <span>YouTube</span>
+  </div>
+  <div class="link-tile" onclick="window.open('https://www.twitch.tv/thunderstormix', '_blank')">
+    <i class="fab fa-twitch"></i>
+    <span>Twitch</span>
+  </div>
+  <div class="link-tile" onclick="window.open('https://steamcommunity.com/id/_thunder24/', '_blank')">
+    <i class="fab fa-steam"></i>
+    <span>Steam</span>
+  </div>
+</div>
+	  
+    </div>
+
+    <div class="window small" id="trash">
+  <div class="window-header">Trash Bin <button onclick="closeWindow('trash')">✖</button></div>
+  <div class="window-body">
+    <div class="trash-body">
+      <a href="https://www.leagueoflegends.com/" target="_blank" class="trash-tile">
+         <img src="images/trash/lol.png" alt="League of Legends" class="trash-logo" />
+        <span>League of Legends</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+    <div class="window medium" id="contact">
+      <div class="window-header">Contact <button onclick="closeWindow('contact')">✖</button></div>
+      <div class="window-body"><p>Email: patryko5@onet.pl</p><p>Email: lludwiko5@gmail.com</p></div>
+    </div>
+
+    <div class="window small" id="settings">
+      <div class="window-header">Settings <button onclick="closeWindow('settings')">✖</button></div>
+      <div class="window-body">
+	  
+<div class="setting-toggle">
+  <span class="setting-label">Motyw</span>
+  <label class="switch-wrapper">
+    <input type="checkbox" id="theme-switch">
+    <span class="slider"></span>
+  </label>
+</div>
+
+<div class="setting-toggle">
+  <span class="setting-label">Dźwięki</span>
+  <label class="switch-wrapper">
+    <input type="checkbox" id="sound-switch" checked>
+    <span class="slider"></span>
+  </label>
+</div>
+	  
+	  </div>
+	  
+    </div>
+	  
+	</div>
+	<div class="led" id="powerBtn"></div>
+	<div class="stand"></div>
+	
+	<div class="base"></div>
+
+	
+  </div>	
+  
+  <div id="mobile-sheet" class="mobile-sheet">
+  <div class="sheet-header">
+    <span id="sheet-title">Tytuł</span>
+    <button onclick="closeSheet()">✖</button>
+  </div>
+  <div id="sheet-body" class="sheet-body">Treść</div>
+  
+</div>
+	 <!-- dioda -->
+  	
+
+  <script src="script.js"></script>
+</body>
+</html>
+

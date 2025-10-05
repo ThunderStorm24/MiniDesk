@@ -1,0 +1,120 @@
+/* desktop.css */
+
+/* tło */
+body.dark-theme {
+  background: linear-gradient(
+    to top,
+    #3e2723 0%,     /* ciemny brąz na dole */
+    #3e2723 20%,    /* dół (20%) */
+    #2c3e50 20%,    /* ciemny niebiesko-szary */
+    #2c3e50 100%    /* góra */
+  );
+  color: #eee;
+}
+
+/* kreska odzielająca tło */
+body.dark-theme::before {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #4a2e17; /* ciemniejszy brąz dla kontrastu */
+}
+
+/* Ramka monitora */
+body.dark-theme .desktop {
+  background: #2e2e2e;
+  border-color: #555;
+}
+
+/* tło w docku ikon */
+body.dark-theme .dock {
+  border-color: #555;
+}
+
+body.dark-theme .intro-text {
+  color: #fff;
+}
+
+body.dark-theme .intro-title {
+  color: #fff;
+}
+
+body.dark-theme .intro-undertitle {
+  color: #fff;
+}
+
+/* window.css */
+
+body.dark-theme .window {
+  background: #3a3a3a;
+  border-color: #666;
+}
+
+body.dark-theme .window-header {
+  background: #111;
+  color: #fff;
+}
+
+/* Monitor */
+body.dark-theme .innerdesktop{
+	background: #1e3a5f;
+	border-color: #666;
+}
+
+body.dark-theme .stand{
+	background: #2e2e2a;
+	border-color: #666;
+}
+body.dark-theme .base{
+	background: #2e2e2a;
+	border-color: #666;
+}
+
+body.dark-theme .icon {
+
+}
+
+body.dark-theme .slider {
+  background-color: #888;
+}
+
+body.dark-theme .innerdesktop.off {
+          background: #111;      /* treść znika */
+}
+
+body.dark-theme .about-scroll::-webkit-scrollbar-track,
+body.dark-theme #projects::-webkit-scrollbar-track {
+  background: #444;
+}
+
+body.dark-theme .about-scroll::-webkit-scrollbar-thumb,
+body.dark-theme #projects::-webkit-scrollbar-thumb {
+  background: #111;
+}
+
+body.dark-theme .about-scroll,
+body.dark-theme #projects {
+  scrollbar-color: #111 #444; /* Firefox */
+}
+
+
+/* project.css */
+
+body.dark-theme .projects-section h2,
+body.dark-theme .animations-section h2,
+body.dark-theme .videos-section h2,
+body.dark-theme .outro-section h2,
+body.dark-theme .tech-section h2 {
+  color: #fff;
+}
+
+body.dark-theme .project-card{
+	color:black;
+}
+
+body.dark-theme .outro-section p{
+	color:white;
+}

@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+
+  background: linear-gradient(
+    to top,
+    #8b5a2b 0%,      /* brąz */
+    #8b5a2b 20%,     /* dół 1/4 */
+    #87ceeb 20%,     /* jasnoniebieski */
+    #87ceeb 100%     /* góra 3/4 */
+  );
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #4a2e17; /* ciemniejszy brąz dla kontrastu */
+}
+
+* {
+  user-select: none;
+}

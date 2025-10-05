@@ -1,0 +1,223 @@
+.projects-body {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+/* sekcja technologii (Javascript, React itd) */
+
+.tech-section {
+  margin-bottom: 30px;
+  
+}
+
+.tech-section h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* odstęp między ikoną a nazwą */
+  background: rgba(255,255,255,0.8);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+  border: 1px solid #ccc;
+  transition: background 0.3s;
+}
+
+.tech i {
+  font-size: 18px;
+  color: inherit; /* opcjonalnie, np. złoty dla JS */
+}
+
+.tech.js i { color: #f0db4f; }
+.tech.html i { color: #e34f26; }
+.tech.react i { color: #61dafb; }
+.tech.node i { color: #3c873a; }
+.tech.mysql i { color: #00758f; }
+.tech.java i { color: #5382a1; }
+.tech.php i { color: #777bb4; }
+.tech.excel i { color: #217346; }
+.tech.movavi i { color: #1e90ff; }
+
+
+.tech:hover {
+  background: #ddd;
+}
+
+/* karty projektów */
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;        /* pozwala przenosić karty do nowego wiersza */
+  gap: 20px;              /* odstęp między kartami */
+  justify-content: center; /* wycentrowanie całej sekcji */
+}
+
+.animations-section {
+  display: flex;
+  flex-wrap: wrap;        /* pozwala przenosić karty do nowego wiersza */
+  gap: 20px;              /* odstęp między kartami */
+  justify-content: center; /* wycentrowanie całej sekcji */
+}
+
+.projects-section h2,
+.animations-section h2,
+.videos-section h2,
+.outro-section h2 {
+  margin: 25px 0 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+.project-card {
+  flex: 1 1 45%;          /* elastyczny, minimalnie zajmuje 45% szerokości kontenera */
+  box-sizing: border-box;  /* uwzględnia padding i border w szerokości */
+  background: #fafafa;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  background: rgba(255,255,255,0.8);
+}
+
+.project-card img{
+  width: 100%;
+  height: clamp(100px,30vw, 200px); 
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.project-card iframe{
+  width: 100%;
+  height: clamp(100px,30vw, 200px); 
+  border-radius: 12px;
+  border: none;   /* usuwa domyślną ramkę */
+  display: block;
+  margin: 0 auto;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-links a {
+  background: #007acc;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.project-links a:hover {
+  background: #005a99;
+}
+
+.projects-list .project {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.projects-list h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-tech {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* odstęp między ikonkami */
+  margin: 6px 0 12px;
+}
+
+.tech-line {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* odstęp między tekstem a ikonkami */
+  margin: 8px 0 14px;
+}
+
+.tech-line i,
+.tech-line img {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.project-tech i,
+.project-tech img {
+  font-size: 22px;   /* mniejsze ikonki */
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Kolory FA ikon */
+.js-icon {
+  color: #f0db4f;         /* kolor liter JS */
+  text-shadow:
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,  
+     -1px  1px 0 #000,  
+      1px  1px 0 #000;   /* czarny obrys */
+}
+.html-icon { color: #e34f26; }
+.react-icon { color: #61dafb; }
+.node-icon { color: #3c873a; }
+.mysql-icon { color: #00758f; }
+.android-icon { color: #3ddc84; }
+.movavi-icon { color: #1e90ff; }
+
+/* Hover efekt */
+.project-tech i:hover,
+.project-tech img:hover {
+  transform: scale(1.2);
+}
+
+.outro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.outro-section h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.outro-section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.outro-section a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.outro-section a:hover {
+  text-decoration: underline;
+}

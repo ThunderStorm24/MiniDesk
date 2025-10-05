@@ -1,0 +1,85 @@
+.stand,
+.base {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .desktop {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+	margin-top: 20px;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .innerdesktop{
+	height: 97vh;
+  }
+
+  .intro-title {
+    font-size: 14vw;
+    text-align: center;
+  }
+
+  .intro-undertitle {
+    font-size: 12vw;
+    text-align: center;
+  }
+
+  .icon {
+    width: 12vw;
+    height: 12vw;
+    font-size: 6vw;
+  }
+
+  .icon p {
+    font-size: 12px;
+  }
+
+  .window {
+    width: 90%;
+    max-width: 560px;
+    top: 80px;
+    left: 10px !important;
+  }
+
+  .dock {
+	margin-bottom: 20px;
+  }
+  
+  .stand,
+  .base {
+    display: none;
+  }
+  
+  .about-scroll{
+	  max-height:400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .intro-title {
+    font-size: 32px;
+  }
+
+  .intro-undertitle {
+    font-size: 22px;
+  }
+
+  .icon {
+    width: 64px;
+    height: 64px;
+    font-size: 22px;
+  }
+
+  .icon p {
+    font-size: 10px;
+  }
+  
+  .stand,
+  .base {
+    display: none;
+  }
+  
+}
