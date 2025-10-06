@@ -1,3 +1,4 @@
+/* cały monitor wraz z ramkami */
 .desktop {
   position: relative;
   width: 800px;
@@ -11,6 +12,7 @@
   flex-wrap: wrap;
 }
 
+/* środkowa ramka */
 .innerdesktop {
 border: 2px solid #333;
 border-radius: 12px;
@@ -18,6 +20,7 @@ background: #c2e9fb;
 transition: background 0.5s ease;
 }
 
+/* intro */
 .intro-text {
   margin-top:70px;
   display: flex;
@@ -41,9 +44,10 @@ transition: background 0.5s ease;
   transition: opacity 0.5s ease;
 }
 
+/* ikony w docku (about itd) */
 .dock {
  position: absolute;
-  bottom: 20px;          /* odległość od dołu */
+  bottom: 20px;          
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -77,6 +81,7 @@ transition: background 0.5s ease;
   font-size: 16px;
 }
 
+/* stojak */
 .stand {
   position: absolute;
   bottom: -104px;   /* wychodzi spod monitora */
@@ -104,6 +109,7 @@ transition: background 0.5s ease;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+/* dioda */
 .led {
   position: absolute;
   bottom: 4px;   /* trochę od krawędzi */
@@ -119,13 +125,12 @@ transition: background 0.5s ease;
   animation: blink 1s infinite;
 }
 
-
-
 @keyframes blink {
   0%, 60%, 100% { opacity: 1; }
   30% { opacity: 0.3; }
 }
 
+/* wyłączony monitor */
 .innerdesktop.off {
           background: #111;      /* treść znika */
 }

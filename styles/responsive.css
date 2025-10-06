@@ -56,6 +56,14 @@
   .about-scroll{
 	  max-height:400px;
   }
+
+    .projects-section{
+flex-direction: column;
+  }
+
+      .animations-section{
+flex-direction: column;
+  }
 }
 
 @media (max-width: 500px) {
@@ -81,5 +89,4 @@
   .base {
     display: none;
   }
-  
 }

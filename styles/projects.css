@@ -4,8 +4,7 @@
   max-height: 80vh;
 }
 
-/* sekcja technologii (Javascript, React itd) */
-
+/* Technology */
 .tech-section {
   margin-bottom: 30px;
   
@@ -26,7 +25,7 @@
 .tech {
   display: flex;
   align-items: center;
-  gap: 8px; /* odstęp między ikoną a nazwą */
+  gap: 8px; 
   background: rgba(255,255,255,0.8);
   padding: 8px 14px;
   border-radius: 8px;
@@ -39,7 +38,7 @@
 
 .tech i {
   font-size: 18px;
-  color: inherit; /* opcjonalnie, np. złoty dla JS */
+  color: inherit; 
 }
 
 .tech.js i { color: #f0db4f; }
@@ -52,43 +51,33 @@
 .tech.excel i { color: #217346; }
 .tech.movavi i { color: #1e90ff; }
 
-
 .tech:hover {
   background: #ddd;
 }
 
-/* karty projektów */
+/* Project cardy */
 .projects-section {
   display: flex;
-  flex-wrap: wrap;        /* pozwala przenosić karty do nowego wiersza */
-  gap: 20px;              /* odstęp między kartami */
-  justify-content: center; /* wycentrowanie całej sekcji */
+  flex-wrap: wrap;       
+  gap: 20px;              
+  justify-content: center; 
 }
 
 .animations-section {
   display: flex;
-  flex-wrap: wrap;        /* pozwala przenosić karty do nowego wiersza */
-  gap: 20px;              /* odstęp między kartami */
-  justify-content: center; /* wycentrowanie całej sekcji */
-}
-
-.projects-section h2,
-.animations-section h2,
-.videos-section h2,
-.outro-section h2 {
-  margin: 25px 0 15px;
-  font-size: 20px;
-  color: #333;
+  flex-wrap: wrap;        
+  gap: 20px;              
+  justify-content: center; 
 }
 
 .project-card {
-  flex: 1 1 45%;          /* elastyczny, minimalnie zajmuje 45% szerokości kontenera */
-  box-sizing: border-box;  /* uwzględnia padding i border w szerokości */
+  flex: 1 1 45%;       
+  box-sizing: border-box;  
   background: #fafafa;
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   background: rgba(255,255,255,0.8);
 }
@@ -105,52 +94,17 @@
   width: 100%;
   height: clamp(100px,30vw, 200px); 
   border-radius: 12px;
-  border: none;   /* usuwa domyślną ramkę */
+  border: none; 
   display: block;
   margin: 0 auto;
 }
 
-.project-links {
-  display: flex;
-  gap: 15px;
-}
-
-.project-links a {
-  background: #007acc;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background 0.3s;
-}
-
-.project-links a:hover {
-  background: #005a99;
-}
-
-.projects-list .project {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.projects-list h3 {
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.project-tech {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* odstęp między ikonkami */
-  margin: 6px 0 12px;
-}
-
+/* Zawartość project cardów, technologie, obrazki*/
 .tech-line {
   display: flex;
   align-items: center;
-  gap: 8px; /* odstęp między tekstem a ikonkami */
-  margin: 8px 0 14px;
+  gap: 8px;
+  margin: 2px 0 14px;
 }
 
 .tech-line i,
@@ -161,22 +115,14 @@
   object-fit: contain;
 }
 
-.project-tech i,
-.project-tech img {
-  font-size: 22px;   /* mniejsze ikonki */
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-}
-
 /* Kolory FA ikon */
 .js-icon {
-  color: #f0db4f;         /* kolor liter JS */
+  color: #f0db4f;      
   text-shadow:
      -1px -1px 0 #000,  
       1px -1px 0 #000,  
      -1px  1px 0 #000,  
-      1px  1px 0 #000;   /* czarny obrys */
+      1px  1px 0 #000;  
 }
 .html-icon { color: #e34f26; }
 .react-icon { color: #61dafb; }
@@ -185,12 +131,58 @@
 .android-icon { color: #3ddc84; }
 .movavi-icon { color: #1e90ff; }
 
-/* Hover efekt */
 .project-tech i:hover,
 .project-tech img:hover {
   transform: scale(1.2);
 }
 
+/* Przyciski live demo i github */
+.project-links {
+  display: flex;
+  gap: 10px;
+  justify-content: left;
+  margin-top: 10px;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* 1 Live Demo */
+.project-links .btn-demo {
+  background: #007acc;
+  color: #fff;
+}
+
+.project-links .btn-demo:hover {
+  background: #0095ff;
+  box-shadow: 0 0 10px rgba(0, 149, 255, 0.5);
+}
+
+/* 2 GitHub */
+.project-links .btn-github {
+  background: #24292e;
+  color: #fff;
+}
+
+.project-links .btn-github:hover {
+  background: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-links .btn-github i {
+  font-size: 16px;
+}
+
+/* Outro */
 .outro-section {
   display: flex;
   flex-direction: column;

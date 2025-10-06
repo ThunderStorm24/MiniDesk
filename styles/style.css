@@ -46,8 +46,8 @@ body {
 
 .desktop {
   position: relative;
-  width: 800px;      /* albo inna szerokość */
-  height: 600px;     /* albo inna wysokość */
+  width: 800px;      
+  height: 600px;     
   padding: 20px;
   background: #fefefe;
   border: 2px solid #333;
@@ -279,8 +279,8 @@ body {
 }
 
 .skills-list i {
-  width: 30px;       /* stała szerokość dla ikon */
-  height: 10px;      /* stała wysokość */
+  width: 30px;       
+  height: 10px;      
   display: flex;
   align-items: center;
   justify-content: center;
@@ -305,7 +305,7 @@ body {
 .language-list span {
   margin-right:10px;
   border: 1px solid black;
-  font-size: 30px;    /* możesz też dać np. 18px */
+  font-size: 30px;   
   color: #333;
   width: 40px;
 }
@@ -322,7 +322,6 @@ body {
   font-size: 14px;
 }
 
-/* label wewnątrz suwaka */
 .switch-wrapper {
   position: relative;
   width: 50px;
@@ -331,14 +330,12 @@ body {
   cursor: pointer;
 }
 
-/* input hidden */
 .switch-wrapper input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* sam suwak */
 .slider {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;

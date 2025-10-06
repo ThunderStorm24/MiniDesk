@@ -34,11 +34,11 @@
 	  </div>
 
     <!-- Okna -->
-	<!-- ABOUT ME -->
+	<!-- 1 ABOUT ME -->
     <div class="window medium" id="about">
-      <div class="window-header">About <button onclick="closeWindow('about')">✖</button></div>
+      <div class="window-header">📄 About <button onclick="closeWindow('about')">✖</button></div>
       <div class="window-body about-content">
-<!-- Górna sekcja -->
+<!-- 1.1 Górna sekcja -->
   <div class="about-header">
     <img src="images/avatar/thunder.jpg" alt="Thunder avatar" class="avatar" />
     <h2>Thunder</h2>
@@ -46,7 +46,7 @@
 
  <hr class="about-divider" />
 
-<!-- Dolna sekcja -->
+<!-- 1.2 Dolna sekcja -->
   <div class="about-scroll">
     <p>Hello! I'm <strong>Thunder</strong>, a passionate <strong>web developer</strong> and programmer.</p>
     <p>I specialize in <strong>frontend development</strong> — I build modern, responsive websites and applications. I also create videos for my YouTube channel, and I'm continuously learning and evolving in the field of programming.</p>
@@ -107,16 +107,16 @@
     </div>
 	
 	
-	<!-- PROJECTS -->
+	<!-- 2 PROJECTS -->
 <div class="window medium" id="projects">
   <div class="window-header">
-    Projects 
+    📁 Projects 
     <button onclick="closeWindow('projects')">✖</button>
   </div>
 
   <div class="window-body projects-body">
     
-    <!-- Sekcja technologies -->
+    <!-- 2.1 Sekcja technologies -->
 	<h2>Development / Technologies</h2>
     <section class="tech-section">
       <div class="tech-grid">
@@ -132,9 +132,11 @@
       </div>
     </section>
 
-    <!-- Projekty Web Development -->
+    <!-- 2.2 Projekty Web Development -->
 	<h2>Projects (Web Development)</h2>
+
     <section class="projects-section">
+      <!-- 2.2.1 Project 1 -->
       <div class="project-card">
         <img src="images/projects/portfolio.png" alt="Project 1 screenshot">
         <h3>Project 1</h3>
@@ -145,11 +147,12 @@
   </p>
 	  
         <div class="project-links">
-          <a href="https://thunderstorm24.github.io" target="_blank">Live Demo</a>
-          <a href="https://github.com/ThunderStorm24/ThunderStorm24.github.io" target="_blank">Source Code</a>
+          <a href="https://thunderstorm24.github.io" target="_blank" class="btn-demo">🌐 Live Demo</a>
+          <a href="https://github.com/ThunderStorm24/ThunderStorm24.github.io" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Source Code</a>
         </div>
       </div>
 
+      <!-- 2.2.2 Project 2 -->
       <div class="project-card">
         <img src="images/projects/custom.png" alt="Project 2 screenshot">
         <h3>Project 2</h3>
@@ -163,10 +166,11 @@
 	  </p>
 	  
         <div class="project-links">
-          <a href="https://github.com/ThunderStorm24/Helpful_pizzeria" target="_blank">Source Code</a>
+          <a href="https://github.com/ThunderStorm24/Helpful_pizzeria" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Source Code</a>
         </div>
       </div>
 	  
+    <!-- 2.2.3 Project 3 -->
 	  <div class="project-card">
         <img src="images/projects/solar.png" alt="Project 3 screenshot">
         <h3>Project 3</h3>
@@ -178,11 +182,12 @@
       <i class="fab fa-node-js node-icon"></i>
 	  </p>
         <div class="project-links">
-		  <a href="https://thunderstorm24.github.io/Solar_System" target="_blank">Live Demo</a>
-          <a href="https://github.com/ThunderStorm24/Solar_System" target="_blank">Source Code</a>
+		  <a href="https://thunderstorm24.github.io/Solar_System" target="_blank"  class="btn-demo">🌐 Live Demo</a>
+          <a href="https://github.com/ThunderStorm24/Solar_System" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Source Code</a>
         </div>
       </div>
 	  
+    <!-- 2.2.4 Project 4 -->
 	  <div class="project-card">
         <img src="images/projects/homebound.jpg" alt="Project 4 screenshot">
         <h3>Project 4</h3>
@@ -192,14 +197,15 @@
       <i class="fab fa-android android-icon"></i>
 	  </p>
         <div class="project-links">
-          <a href="https://github.com/ThunderStorm24/HomeBound" target="_blank">Source Code</a>
+          <a href="https://github.com/ThunderStorm24/HomeBound" target="_blank" class="btn-github"><i class="fa-brands fa-github"></i> Source Code</a>
         </div>
       </div>
     </section>
 
-    <!-- Animacje -->
+    <!-- 2.3 Animacje -->
 	      <h2>Animations/Videos</h2>
     <section class="animations-section">
+      <!-- 2.3.1 Animation 1 -->
       <div class="project-card">
         <iframe width="100%" height="250" src="https://www.youtube.com/embed/ddwaNUZaKHs" 
           frameborder="0" allowfullscreen></iframe>
@@ -210,6 +216,7 @@
 		</p>
       </div>
 	  
+    <!-- 2.3.2 Animation 2 -->
 	  <div class="project-card">
         <iframe 
     width="100%" 
@@ -229,7 +236,7 @@
     </section>
 
 
-    <!-- Zakończenie -->
+    <!-- 2.4 Zakończenie -->
 <section class="outro-section">
   <h2>That's all</h2>
   <p>
@@ -244,8 +251,9 @@
   </div>
 </div>
 	
+  <!-- 3 LINKI -->
 	<div class="window normal" id="links">
-      <div class="window-header">Links <button onclick="closeWindow('links')">✖</button></div>
+      <div class="window-header">⛓ Links <button onclick="closeWindow('links')">✖</button></div>
       
 	  <div class="window-body links-body">
   <div class="link-tile" onclick="window.open('https://github.com/thunderstorm24', '_blank')">
@@ -272,8 +280,9 @@
 	  
     </div>
 
+    <!-- 4 KOSZ -->
     <div class="window small" id="trash">
-  <div class="window-header">Trash Bin <button onclick="closeWindow('trash')">✖</button></div>
+  <div class="window-header">🗑️ Trash Bin <button onclick="closeWindow('trash')">✖</button></div>
   <div class="window-body">
     <div class="trash-body">
       <a href="https://www.leagueoflegends.com/" target="_blank" class="trash-tile">
@@ -284,39 +293,61 @@
   </div>
 </div>
 
-    <div class="window medium" id="contact">
-      <div class="window-header">Contact <button onclick="closeWindow('contact')">✖</button></div>
-      <div class="window-body"><p>Email: patryko5@onet.pl</p><p>Email: lludwiko5@gmail.com</p></div>
+    <!-- 5 KONTAKT -->
+<div class="window" id="contact" style="width: 400px;">
+  <div class="window-header">
+    ✉️ Mail
+    <button onclick="closeWindow('contact')">✖</button>
+  </div>
+
+  <div class="window-body contact-content">
+    <h2 class="contact-title">Mail</h2>
+
+    <p class="contact-description">
+      The easiest way to reach me is by email – especially the first one below.  
+      Feel free to contact me regarding cooperation, projects, or any ideas you’d like to share!
+    </p>
+
+    <div class="contact-avatar">
+      <img src="images/avatar/thunder.jpg" alt="Thunder avatar" class="avatar" />
+      <h3>Thunder</h3>
     </div>
 
+    <div class="contact-emails">
+      <p><strong>Email 1:</strong> <a href="mailto:patryko5@onet.pl">patryko5@onet.pl</a></p>
+      <p><strong>Email 2:</strong> <a href="mailto:lludwiko5@gmail.com">lludwiko5@gmail.com</a></p>
+    </div>
+  </div>
+</div>
+
+    <!-- 6 USTAWIENIA -->
     <div class="window small" id="settings">
-      <div class="window-header">Settings <button onclick="closeWindow('settings')">✖</button></div>
+      <div class="window-header">⚙️ Settings <button onclick="closeWindow('settings')">✖</button></div>
       <div class="window-body">
 	  
+<!-- 6.1 Motyw off/on -->
 <div class="setting-toggle">
-  <span class="setting-label">Motyw</span>
+  <span class="setting-label">🌙 Theme</span>
   <label class="switch-wrapper">
     <input type="checkbox" id="theme-switch">
     <span class="slider"></span>
   </label>
 </div>
 
+<!-- 6.2 Dźwięki off/on -->
 <div class="setting-toggle">
-  <span class="setting-label">Dźwięki</span>
+  <span class="setting-label">🔊 Sounds</span>
   <label class="switch-wrapper">
     <input type="checkbox" id="sound-switch" checked>
     <span class="slider"></span>
   </label>
-</div>
-	  
+</div>  
 	  </div>
-	  
     </div>
 	  
 	</div>
 	<div class="led" id="powerBtn"></div>
 	<div class="stand"></div>
-	
 	<div class="base"></div>
 
 	

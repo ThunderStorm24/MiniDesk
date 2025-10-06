@@ -1,37 +1,33 @@
 /* desktop.css */
 
-/* tło */
 body.dark-theme {
   background: linear-gradient(
-    to top,
-    #3e2723 0%,     /* ciemny brąz na dole */
-    #3e2723 20%,    /* dół (20%) */
-    #2c3e50 20%,    /* ciemny niebiesko-szary */
-    #2c3e50 100%    /* góra */
+    to top, /* tło */
+    #3e2723 0%,     
+    #3e2723 20%,    
+    #2c3e50 20%,    
+    #2c3e50 100%    
   );
   color: #eee;
 }
 
-/* kreska odzielająca tło */
 body.dark-theme::before {
-  content: "";
+  content: ""; /* kreska odzielająca tło */
   position: absolute;
   bottom: 20%;
   left: 0;
   width: 100%;
   height: 5px;
-  background: #4a2e17; /* ciemniejszy brąz dla kontrastu */
+  background: #4a2e17; 
 }
 
-/* Ramka monitora */
 body.dark-theme .desktop {
-  background: #2e2e2e;
+  background: #2e2e2e; /* Obramówka monitora */
   border-color: #555;
 }
 
-/* tło w docku ikon */
 body.dark-theme .dock {
-  border-color: #555;
+  border-color: #555; /* tło w docku ikon (tam gdzie ikony) */
 }
 
 body.dark-theme .intro-text {
@@ -82,7 +78,7 @@ body.dark-theme .slider {
 }
 
 body.dark-theme .innerdesktop.off {
-          background: #111;      /* treść znika */
+  background: #111;      
 }
 
 body.dark-theme .about-scroll::-webkit-scrollbar-track,
@@ -117,4 +113,43 @@ body.dark-theme .project-card{
 
 body.dark-theme .outro-section p{
 	color:white;
+}
+
+body.dark-theme .tech{
+  border: 1px solid #999; 
+}
+
+body.dark-theme .tech:hover {
+  background: #999;
+}
+
+body.dark-theme .project-card {
+  border: 2px solid #999;
+}
+
+
+/* contact.css */
+
+body.dark-theme .contact-title{
+  color: #fff;
+}
+
+body.dark-theme .contact-description{
+  color: #ccc;
+}
+
+body.dark-theme .contact-avatar h3{
+  color: #eee;
+}
+
+body.dark-theme .contact-emails p{
+  color: #ddd;
+}
+
+body.dark-theme .contact-emails a{
+  color: #1e90ff;
+}
+
+body.dark-theme .contact-emails a:hover{
+  color: #1eaaff;
 }
