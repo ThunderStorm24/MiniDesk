@@ -1,5 +1,5 @@
 ## 🚀 Try the Demo  
-👉 [**Try the demo!**](https://github.com/ThunderStorm24) (coming soon...)_
+👉 [**Try the demo!**](https://thunderstorm24.github.io/MiniDesk)
 
 ---
 
