@@ -283,7 +283,7 @@
     <!-- 4 KOSZ -->
     <div class="window small" id="trash">
   <div class="window-header">🗑️ Trash Bin <button onclick="closeWindow('trash')">✖</button></div>
-  <div class="window-body">
+  <div class="window-body"> 
     <div class="trash-body">
       <a href="https://www.leagueoflegends.com/" target="_blank" class="trash-tile">
          <img src="images/trash/lol.png" alt="League of Legends" class="trash-logo" />
@@ -358,11 +358,20 @@
     <span id="sheet-title">Tytuł</span>
     <button onclick="closeSheet()">✖</button>
   </div>
-  <div id="sheet-body" class="sheet-body">Treść</div>
+  <div id="sheet-content" class="sheet-body">Treść</div>
   
 </div>
 	 <!-- dioda -->
   	
+
+  <!-- MOBILE SHEET -->
+<div id="mobile-sheet">
+  <div class="sheet-header">
+    <span id="sheet-title"></span>
+    <button onclick="closeSheet()">✖</button>
+  </div>
+  <div class="sheet-body" id="sheet-content"></div>
+</div>
 
   <script src="script.js"></script>
 </body>

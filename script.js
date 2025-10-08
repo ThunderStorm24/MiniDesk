@@ -1,48 +1,50 @@
-let topZIndex = 1000; // początkowy wysoki z-index
+let topZIndex = 1000;
 
 function openWindow(id) {
-  // Mobile logika (pełnoekranowe okno zamiast bottom sheet)
-  if (window.innerWidth <= 900) {
-    const win = document.getElementById(id);
-
-    // chowamy wszystkie inne "mobilne okna"
-    document.querySelectorAll('.window').forEach(w => {
-      w.style.display = 'none';
-    });
-
-    // pokazujemy wybrane okno
-    win.style.display = 'flex';
-    win.style.position = 'fixed';     // pełny ekran
-    win.style.top = '0';
-    win.style.left = '0';
-    win.style.zIndex = 9999;          // nad wszystkim
-    win.style.animation = 'windowOpen 0.2s ease forwards';
-
-    return;
-  }
-
-
-  // Desktopowa logika (klasyczne okna)
   const win = document.getElementById(id);
+  if (!win) return;
 
+  // --- MOBILE ---
+  if (window.innerWidth <= 900) {
+  const sheet = document.getElementById('mobile-sheet');
+  const title = document.getElementById('sheet-title');
+  const content = document.getElementById('sheet-content');
+
+  const headerEl = win.querySelector('.window-header');
+  const bodyEl = win.querySelector('.window-body');
+
+  // set tytuł
+  title.textContent = headerEl ? headerEl.textContent.replace('✖','').trim() : id;
+
+  // oryginalny element --> sheet zamiast cloneNode/innerHTML
+  content.innerHTML = '';         
+  content.appendChild(bodyEl);    
+
+  // ID okna dla CSS
+  sheet.setAttribute('data-window', id);
+
+  // mobile sheet
+  sheet.classList.add('active');
+
+  // hide desktop windows
+  document.querySelectorAll('.window').forEach(w => w.style.display = 'none');
+
+  return;
+}
+
+  // --- DESKTOP ---
   if (win.style.display === 'flex') {
-    win.style.animation = 'windowOpen 0.2s ease'; // jeśli ktoś kliknie znowu
+    win.style.animation = 'windowOpen 0.2s ease';
     return;
   }
 
   win.style.display = 'flex';
   win.style.animation = 'windowOpen 0.2s ease forwards';
-
   topZIndex++;
   win.style.zIndex = topZIndex;
 
-  const offset = 30;
-  const baseTop = 100;
-  const baseLeft = 100;
-
-  if (typeof openWindow.openCount === 'undefined') {
-    openWindow.openCount = 0;
-  }
+  const offset = 30, baseTop = 100, baseLeft = 100;
+  if (typeof openWindow.openCount === 'undefined') openWindow.openCount = 0;
 
   win.style.top = (baseTop + offset * openWindow.openCount) + 'px';
   win.style.left = (baseLeft + offset * openWindow.openCount) + 'px';
@@ -52,7 +54,16 @@ function openWindow(id) {
 }
 
 function closeSheet() {
-  document.getElementById("mobile-sheet").classList.remove("active");
+  const sheet = document.getElementById("mobile-sheet");
+  const content = document.getElementById("sheet-content");
+
+  const bodyEl = content.firstElementChild;
+  if(bodyEl){
+    const originalWindow = document.getElementById(sheet.dataset.window);
+    originalWindow.appendChild(bodyEl); 
+  }
+
+  sheet.classList.remove("active");
 }
 
 function closeWindow(id) {
@@ -113,23 +124,22 @@ document.addEventListener('mousemove', (e) => {
   });
 });
 
-// Ścieżka do dźwięku
 const clickSound = new Audio("assets/sounds/click.wav");
 const switchSound = new Audio("assets/sounds/switch.wav");
 const closeSound = new Audio("assets/sounds/close.wav");
 
+// sound
 let soundEnabled = true;
 
-// Obsługa checkboxa dla dźwięku
 document.getElementById("sound-switch").addEventListener("change", function () {
   soundEnabled = this.checked;
 });
 
-// Obsługa checkboxa dla motywu
+//theme
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const themeSwitch = document.getElementById("theme-switch");
 
-// Ustawienie początkowe tak jak w systemie
+// Ustawienie początkowe tak jak w systemie uzytkownikaa
 if (prefersDark) {
   document.body.classList.add("dark-theme");
   themeSwitch.checked = true;
@@ -138,12 +148,12 @@ if (prefersDark) {
   themeSwitch.checked = false;
 }
 
-// Obsługa zmiany przez użytkownika
+// Obsługa zmiany przez uzytkownika
 themeSwitch.addEventListener("change", function () {
   document.body.classList.toggle("dark-theme", this.checked);
 });
 
-// Dodaj dźwięk do ikon
+// Dźwięk do ikon
 document.querySelectorAll(".icon").forEach(icon => {
   icon.addEventListener("click", () => {
     if (soundEnabled) {
@@ -157,12 +167,10 @@ document.querySelectorAll('.switch-wrapper input').forEach(input => {
   input.addEventListener('change', () => {
     if (soundEnabled) switchSound.play();
     
-    // Obsługa motywu
     if (input.id === 'theme-toggle') {
       document.body.classList.toggle('dark-theme');
     }
 
-    // Obsługa dźwięków
     if (input.id === 'sound-toggle') {
       soundEnabled = input.checked;
     }
@@ -182,3 +190,4 @@ const powerBtn = document.getElementById('powerBtn');
     screen.classList.toggle('off');
 	turnOffDesktop();
   });
+
