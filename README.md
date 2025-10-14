@@ -17,7 +17,7 @@ The goal of this project is to transform a traditional portfolio into a playful 
 ---
 
 ## 🧭 Features  
-- 🪟 **Interactive windows** — open, move, and close different app-like windows on the screen.  
+- **Interactive windows** — open, move, and close different app-like windows on the screen.  
 - 💡 **Light & Dark mode** — easily switch between two visual themes.  
 - 🔊 **Sound effects** — toggle sound feedback on or off for actions like opening and closing windows.  
 - ⚙️ **Desktop simulation** — feels like using a real mini operating system.  
